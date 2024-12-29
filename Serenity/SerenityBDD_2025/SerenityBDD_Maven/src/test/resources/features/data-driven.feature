@@ -1,5 +1,7 @@
+@api @dataDriven
 Feature: Data-driven API Tests
 
+  @createEmployee
   Scenario Outline: Create a new employee with different details
     Given I send a POST request with the following body:
       | name       | age | job_title   | department |
