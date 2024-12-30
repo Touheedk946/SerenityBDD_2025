@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class ResponseValidator {
-
+    //builderPattern
     // Employee Response Validation
     public static void validateEmployeeResponse(Response response) {
         EmployeeResponse employeeResponse = response.as(EmployeeResponse.class, ObjectMapperType.GSON);

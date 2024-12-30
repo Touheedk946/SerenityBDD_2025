@@ -14,6 +14,7 @@
     </properties>
 
     <dependencies>
+
         <!-- Serenity Core -->
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -34,17 +35,19 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.12.0</version>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-spring</artifactId>
-            <version>7.12.0</version>
-        </dependency>
+
 
         <!-- JSON Handling -->
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
             <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version> <!-- Use a version compatible with your project -->
+            <scope>test</scope>
         </dependency>
 
         <!-- JUnit 5 -->
@@ -66,12 +69,17 @@
             <scope>provided</scope>
         </dependency>
 
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version> <!-- Or the latest version -->
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.12.0</version> <!-- Same version as cucumber-java and cucumber-spring -->
         </dependency>
 
         <!-- Logging Dependencies -->
@@ -92,6 +100,10 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.22.2</version>
         </dependency>
+
+
+
+
     </dependencies>
 
     <build>
@@ -100,6 +112,38 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+<!--                        <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>-->
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <includes>
+                        <include>**/CucumberTestSuite.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- Serenity Maven Plugin -->
+            <plugin>
+                <groupId>net.serenity-bdd.maven.plugins</groupId>
+                <artifactId>serenity-maven-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>aggregate</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -20,16 +20,6 @@ public class RequestHelper {
         return objectMapper.writeValueAsString(loginRequest);
     }
 
-    // Method to generate an employee creation request body
-    public static String generateEmployeeRequestBody(String name, String age, String jobTitle, String department) throws JsonProcessingException {
-        Employee employee = Employee.builder()
-                .name(name)
-                .age(age)
-                .jobTitle(jobTitle)
-                .department(department)
-                .build();
-        return objectMapper.writeValueAsString(employee);
-    }
 
     // Method to generate job title creation request body
     public static String generateJobTitleRequestBody(String title, String description) throws JsonProcessingException {

@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Employee {
     private String name;
-    private String age;
+    private int age;
     private String jobTitle;
     private String department;
 }
