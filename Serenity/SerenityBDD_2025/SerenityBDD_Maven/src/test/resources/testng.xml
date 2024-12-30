@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<suite name="Cucumber Suite" verbose="1" parallel="false">
-    <test name="Cucumber Tests">
-        <!-- Define the classes to run -->
-        <classes>
-            <class name="com.example.api.CucumberTestSuite" />
-        </classes>
-    </test>
-</suite>

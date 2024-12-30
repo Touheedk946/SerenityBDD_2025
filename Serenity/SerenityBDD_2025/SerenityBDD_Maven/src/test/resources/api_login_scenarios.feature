@@ -1,10 +1,10 @@
-@authentication @api
-Feature: User Authentication API
+@smoke @api @login
+Feature: API Testing Scenarios
 
   @loginValid
-  Scenario: Valid user login with correct credentials
+  Scenario: User login with valid credentials
     Given I send a POST request to login with the following body:
-      | username | password |
+      | username  | password  |
       | validUser | validPass |
     Then I should receive status code 200
     And the response should contain "token"
@@ -16,3 +16,5 @@ Feature: User Authentication API
       | invalidUser | invalidPass |
     Then I should receive status code 401
     And the response should contain "error"
+
+

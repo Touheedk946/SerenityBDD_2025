@@ -3,7 +3,7 @@ Feature: Basic API Tests
 
   @createEmployee
   Scenario: Create a new employee
-    Given I send a POST request with the following body:
+    Given User send a Post request to HRM API to create employee
       | name     | age | job_title   | department |
       | John Doe | 30  | Developer   | IT         |
     Then I should receive status code 201
