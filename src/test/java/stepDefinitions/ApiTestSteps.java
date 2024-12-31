@@ -23,7 +23,6 @@ import static com.example.api.endpoints.ApiEndpoints.BASE_URL;
 public class ApiTestSteps {
     private Response response;
     ApiService apiService = new ApiService();
-    ObjectMapper objectMapper = new ObjectMapper();
 
     @Given("User send a Post request to HRM API")
     public void user_send_a_post_request_to_hrm_api(io.cucumber.datatable.DataTable dataTable) {
