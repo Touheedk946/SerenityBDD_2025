@@ -1,9 +1,8 @@
-package com.example.api;
+package com.example.api.helper;
 
-import com.example.api.pojo.reqeusthelper.Department;
-import com.example.api.pojo.reqeusthelper.Employee;
-import com.example.api.pojo.reqeusthelper.JobTitle;
-import com.example.api.pojo.reqeusthelper.LoginRequest;
+import com.example.api.employeemodals.reqeusts.Department;
+import com.example.api.employeemodals.reqeusts.JobTitle;
+import com.example.api.employeemodals.reqeusts.LoginRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

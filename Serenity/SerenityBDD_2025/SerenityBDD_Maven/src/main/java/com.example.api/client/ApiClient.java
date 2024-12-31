@@ -1,4 +1,4 @@
-package com.example.api;
+package com.example.api.client;
 
 import net.serenitybdd.rest.SerenityRest;
 import io.restassured.response.Response;
@@ -16,11 +16,11 @@ public class ApiClient {
         return request.get(endpoint);
     }
 
-    public Response sendPostRequest(String endpoint, String body) {
+    public Response sendPostRequest(String endpoint, Object body) {
         return request.body(body).post(endpoint);
     }
 
-    public Response sendPutRequest(String endpoint, String body) {
+    public Response sendPutRequest(String endpoint, Object body) {
         return request.body(body).put(endpoint);
     }
 

@@ -1,4 +1,4 @@
-package com.example.api.pojo.responsehelper;
+package com.example.api.employeemodals.responses;
 
 public class DepartmentResponse {
     private String departmentId;
