@@ -1,10 +1,10 @@
-package com.example.api;
+package com.example.api.helper;
 
 
-import com.example.api.pojo.responsehelper.DepartmentResponse;
-import com.example.api.pojo.responsehelper.EmployeeResponse;
-import com.example.api.pojo.responsehelper.ErrorResponse;
-import com.example.api.pojo.responsehelper.JobTitleResponse;
+import com.example.api.employeemodals.responses.DepartmentResponse;
+import com.example.api.employeemodals.responses.EmployeeResponse;
+import com.example.api.employeemodals.responses.ErrorResponse;
+import com.example.api.employeemodals.responses.JobTitleResponse;
 import io.restassured.response.Response;
 import io.restassured.mapper.ObjectMapperType;
 
@@ -46,7 +46,6 @@ public class ResponseValidator {
         assertNotNull(errorResponse.getError(), "Error message should not be null");
         assertEquals(expectedErrorMessage, errorResponse.getError(), "Error message does not match");
     }
-
     // Common Status Code Validation
     public static void validateStatusCode(Response response, int statusCode) {
         response.then().statusCode(statusCode);

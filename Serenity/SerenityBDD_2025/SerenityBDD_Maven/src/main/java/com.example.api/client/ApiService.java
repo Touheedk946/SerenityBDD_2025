@@ -1,4 +1,4 @@
-package com.example.api;
+package com.example.api.client;
 
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
@@ -10,19 +10,17 @@ public class ApiService {
     public ApiService() {
         apiClient = new ApiClient();
     }
-
     // For sending a GET request
     public Response sendGetRequest(String endpoint) {
         return apiClient.sendGetRequest(endpoint);
     }
-
     // For sending a POST request
-    public Response sendPostRequest(String endpoint, String body) {
+    public Response sendPostRequest(String endpoint, Object body) {
         return apiClient.sendPostRequest(endpoint, body);
     }
 
     // For sending a PUT request
-    public Response sendPutRequest(String endpoint, String body) {
+    public Response sendPutRequest(String endpoint, Object body) {
         return apiClient.sendPutRequest(endpoint, body);
     }
 

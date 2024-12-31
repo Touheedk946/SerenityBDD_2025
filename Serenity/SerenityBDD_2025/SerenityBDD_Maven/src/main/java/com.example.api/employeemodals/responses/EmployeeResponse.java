@@ -1,11 +1,10 @@
-package com.example.api.pojo.responsehelper;
+package com.example.api.employeemodals.responses;
 
 public class EmployeeResponse {
     private String employeeId;
     private String name;
     private String jobTitle;
     private String department;
-
     // Getters and Setters
     public String getEmployeeId() {
         return employeeId;
