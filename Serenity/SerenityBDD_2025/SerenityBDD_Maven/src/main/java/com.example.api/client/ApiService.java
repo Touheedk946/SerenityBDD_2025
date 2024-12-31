@@ -10,12 +10,10 @@ public class ApiService {
     public ApiService() {
         apiClient = new ApiClient();
     }
-
     // For sending a GET request
     public Response sendGetRequest(String endpoint) {
         return apiClient.sendGetRequest(endpoint);
     }
-
     // For sending a POST request
     public Response sendPostRequest(String endpoint, Object body) {
         return apiClient.sendPostRequest(endpoint, body);

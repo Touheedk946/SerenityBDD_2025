@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class JobTitle {
     private String title;
     private String description;
+
 }

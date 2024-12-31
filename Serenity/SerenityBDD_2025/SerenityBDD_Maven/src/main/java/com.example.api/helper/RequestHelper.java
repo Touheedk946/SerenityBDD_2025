@@ -13,8 +13,8 @@ public class RequestHelper {
     // Method to generate a login request body
     public static String generateLoginRequestBody(String username, String password) throws JsonProcessingException {
         LoginRequest loginRequest = LoginRequest.builder()
-                .username(username)
-                .password(password)
+                .setUsername(username)
+                .setPassword(password)
                 .build();
         return objectMapper.writeValueAsString(loginRequest);
     }
@@ -23,8 +23,8 @@ public class RequestHelper {
     // Method to generate job title creation request body
     public static String generateJobTitleRequestBody(String title, String description) throws JsonProcessingException {
         JobTitle jobTitle = JobTitle.builder()
-                .title(title)
-                .description(description)
+                .setTitle(title)
+                .setDescription(description)
                 .build();
         return objectMapper.writeValueAsString(jobTitle);
     }
@@ -32,8 +32,8 @@ public class RequestHelper {
     // Method to generate department creation request body
     public static String generateDepartmentRequestBody(String name, String description) throws JsonProcessingException {
         Department department = Department.builder()
-                .name(name)
-                .description(description)
+                .setName(name)
+                .setDescription(description)
                 .build();
         return objectMapper.writeValueAsString(department);
     }

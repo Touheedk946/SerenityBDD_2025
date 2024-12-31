@@ -5,7 +5,6 @@ public class EmployeeResponse {
     private String name;
     private String jobTitle;
     private String department;
-
     // Getters and Setters
     public String getEmployeeId() {
         return employeeId;

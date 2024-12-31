@@ -4,7 +4,6 @@ public class DepartmentResponse {
     private String departmentId;
     private String name;
     private String description;
-
     // Getters and Setters
     public String getDepartmentId() {
         return departmentId;

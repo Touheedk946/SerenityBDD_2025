@@ -5,7 +5,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class ApiClient {
-
     private RequestSpecification request;
 
     public ApiClient() {

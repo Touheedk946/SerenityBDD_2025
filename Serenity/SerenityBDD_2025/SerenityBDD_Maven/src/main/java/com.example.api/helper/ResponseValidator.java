@@ -46,7 +46,6 @@ public class ResponseValidator {
         assertNotNull(errorResponse.getError(), "Error message should not be null");
         assertEquals(expectedErrorMessage, errorResponse.getError(), "Error message does not match");
     }
-
     // Common Status Code Validation
     public static void validateStatusCode(Response response, int statusCode) {
         response.then().statusCode(statusCode);
